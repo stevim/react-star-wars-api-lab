@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 
 import { getStarships } from "../../services/sw-api"
 
+
 const Starships = () => {
   const [starships, setStarships] = useState([])
   
@@ -24,7 +25,10 @@ const Starships = () => {
           key={starship.name}
           className="link-container"
         >
-          <Link to={`/starships/${starship._id}`}>{starship.name}</Link>
+          <Link 
+            to={`/starships/${
+              starship.url.split('/')[5]
+            }`}>{starship.name}</Link>
         </div>
       ))}
     </main>

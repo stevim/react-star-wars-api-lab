@@ -18,19 +18,21 @@ const Starships = () => {
   if (!starships.results) return <h1>Loading Starships...</h1>
   
   return (
-    <main className="starships">
-      <h1>Starships Component</h1>
-      {starships.results.map(starship => (
-        <div
-          key={starship.name}
-          className="link-container"
-        >
-          <Link 
-            to={`/starships/${
-              starship.url.split('/')[5]
-            }`}>{starship.name}</Link>
+    <main>
+      <h1>Starships</h1>
+        <div className="starships">
+          {starships.results.map(starship => (
+            <button
+              key={starship.name}
+              className="link-container"
+            >
+              <Link 
+                to={`/starships/${
+                  starship.url.split('/')[5]
+                }`}>{starship.name}</Link>
+            </button>
+          ))}
         </div>
-      ))}
     </main>
   )
 }

@@ -21,9 +21,9 @@ const StarshipDetails = () => {
 
   return (
     <main>
-      <h1>Starship Details</h1>
-      <h2>{starshipDetails.name}</h2>
-      <h3>{starshipDetails.model}</h3>
+      {/* <h1>Starship Details</h1> */}
+      <h1>{starshipDetails.name}</h1>
+      <h3>Model: {starshipDetails.model}</h3>
       <h4><Link to={`/`}>All Starships</Link></h4>
     </main>
   )

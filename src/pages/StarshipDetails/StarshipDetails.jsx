@@ -24,7 +24,7 @@ const StarshipDetails = () => {
       {/* <h1>Starship Details</h1> */}
       <h1>{starshipDetails.name}</h1>
       <h3>Model: {starshipDetails.model}</h3>
-      <h4><Link to={`/`}>All Starships</Link></h4>
+      <h4><button><Link to={`/`}>Return to Starship List</Link></button></h4>
     </main>
   )
 }
